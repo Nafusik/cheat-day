@@ -11,7 +11,8 @@
 		292CDCC22342399400C00519 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCC02342399400C00519 /* Item.swift */; };
 		292CDCC62342399D00C00519 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCC32342399D00C00519 /* SwipeTableViewController.swift */; };
 		292CDCC72342399D00C00519 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCC42342399D00C00519 /* CategoryViewController.swift */; };
-		292CDCC82342399D00C00519 /* CheatDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCC52342399D00C00519 /* CheatDayViewController.swift */; };
+		292CDCC82342399D00C00519 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCC52342399D00C00519 /* ItemViewController.swift */; };
+		292CDCCA23428B9700C00519 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292CDCC923428B9700C00519 /* ItemDetailViewController.swift */; };
 		29FF5EB0234237FD00BA8416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF5EAF234237FD00BA8416 /* AppDelegate.swift */; };
 		29FF5EB5234237FD00BA8416 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29FF5EB3234237FD00BA8416 /* Main.storyboard */; };
 		29FF5EB7234237FE00BA8416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29FF5EB6234237FE00BA8416 /* Assets.xcassets */; };
@@ -24,7 +25,8 @@
 		292CDCC02342399400C00519 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		292CDCC32342399D00C00519 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		292CDCC42342399D00C00519 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		292CDCC52342399D00C00519 /* CheatDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheatDayViewController.swift; sourceTree = "<group>"; };
+		292CDCC52342399D00C00519 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		292CDCC923428B9700C00519 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		29FF5EAC234237FD00BA8416 /* cheat-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cheat-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FF5EAF234237FD00BA8416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29FF5EB4234237FD00BA8416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,7 +87,8 @@
 			children = (
 				292CDCC42342399D00C00519 /* CategoryViewController.swift */,
 				292CDCC32342399D00C00519 /* SwipeTableViewController.swift */,
-				292CDCC52342399D00C00519 /* CheatDayViewController.swift */,
+				292CDCC52342399D00C00519 /* ItemViewController.swift */,
+				292CDCC923428B9700C00519 /* ItemDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,8 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292CDCCA23428B9700C00519 /* ItemDetailViewController.swift in Sources */,
 				292CDCC22342399400C00519 /* Item.swift in Sources */,
-				292CDCC82342399D00C00519 /* CheatDayViewController.swift in Sources */,
+				292CDCC82342399D00C00519 /* ItemViewController.swift in Sources */,
 				29FF5EB0234237FD00BA8416 /* AppDelegate.swift in Sources */,
 				292CDCC12342399400C00519 /* Category.swift in Sources */,
 				292CDCC72342399D00C00519 /* CategoryViewController.swift in Sources */,

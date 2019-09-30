@@ -80,7 +80,7 @@ class CategoryViewController: SwipeTableViewController, UIPickerViewDelegate, UI
          performSegue(withIdentifier: "goToItems", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! CheatDayViewController
+        let destinationVC = segue.destination as! ItemViewController
         
         if let indexPath = tableView.indexPathForSelectedRow{
             destinationVC.selectedCategory = categories?[indexPath.row]

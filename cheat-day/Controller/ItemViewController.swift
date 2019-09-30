@@ -11,11 +11,12 @@ import RealmSwift
 import Foundation
 import ChameleonFramework
 
-class CheatDayViewController: SwipeTableViewController  {
+class ItemViewController: SwipeTableViewController  {
 
     let realm = try! Realm()
     
     var tocheatItems: Results<Item>?
+    var selectedItem: Item?
     
     var selectedCategory : Category? {
         didSet{
@@ -90,11 +91,11 @@ class CheatDayViewController: SwipeTableViewController  {
         return cell
     }
     
-    //MARK - TableView Deletegate Methods
+    //MARK: - TableView Delegate Methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         if let item = tocheatItems?[indexPath.row]{
-            
+            selectedItem = item
+
             do {
                 try realm.write {
                     item.done = !item.done
@@ -104,11 +105,18 @@ class CheatDayViewController: SwipeTableViewController  {
                 print("Error saving done status, \(error)")
             }
         }
-        
+
         tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        performSegue(withIdentifier: "goToItemDetail", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ItemDetailViewController
+        
+        destinationVC.selectedItem = selectedItem
+    }
+ 
     
     //MARK - Add New Items
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -188,7 +196,7 @@ class CheatDayViewController: SwipeTableViewController  {
 }
 
 //MARK: - Search bar methods
-extension CheatDayViewController: UISearchBarDelegate{
+extension ItemViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         tocheatItems = tocheatItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: true)
