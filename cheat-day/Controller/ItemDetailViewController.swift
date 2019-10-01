@@ -17,11 +17,11 @@ class ItemDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var itemImage: UIImageView!
     
+    @IBOutlet weak var caloryLabel: UILabel!
     
-    @IBOutlet weak var itemTableView: UITableView!
+    @IBOutlet weak var distanceLabel: UILabel!
     
-    @IBOutlet weak var nutritionLabel: UILabel!
-    
+    @IBOutlet weak var stepsLabel: UILabel!
     var selectedItem : Item?
     
     var nutritionalArray = [Float]()
@@ -39,7 +39,6 @@ class ItemDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         nutritionalArray = [currentItem.calories, 1.0]
         itemLabel.text = currentItem.title
         itemImage.image = image
-        nutritionLabel.text = "Nutritional Fact for \(currentItem.title)"
     
         }
     }
@@ -80,4 +79,6 @@ class ItemDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
+    @IBAction func addToCheatDayPressed(_ sender: UIButton) {
+    }
 }
